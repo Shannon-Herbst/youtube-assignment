@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="darkmode.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -18,6 +20,7 @@
         <div>
             <span class="material-symbols-outlined">menu</span>
             <img src="https://www.vectorlogo.zone/logos/youtube/youtube-ar21.svg" alt="youtube logo">
+    
         </div>
 
         <div>
@@ -27,308 +30,321 @@
         </div>
 
         <div class="nav-buttons">
+            <button id="theme-switch" >
+                <!-- <img src="/assets/light mode.svg" alt="light mode icon">
+                <img src="/assets/dark mode.svg" alt="dark mode icon"> -->
+
+                <span class="material-symbols-outlined">light_mode</span>
+                <span class="material-symbols-outlined">dark_mode</span>
+            </button>
             <button id="create-button"><span class="material-symbols-outlined">add_2</span>Create</button>
             <button id="noti-button"><span class="material-symbols-outlined">notifications</span></button>
             <button id="profile-button">S</button>
         </div>
     </header>
 
-    <aside>
-        <div class="aside-sections">
-            <section class="buttons" id="home">
-                <span class="material-symbols-outlined" alt="home icon">home</span>
-                Home
-            </section> 
+    <div class="container">
 
-            <section class="buttons" id="shorts">
-                <img src="/shorts.svg" alt="shorts icon">
-                Shorts
-            </section> 
-        </div>
+        <aside>
+            <div class="aside-sections">
+                <section class="buttons" id="home">
+                    <span class="material-symbols-outlined" alt="home icon">home</span>
+                    Home
+                </section> 
 
-        <div class="aside-sections">
-
-            <h3>Subscriptions ></h3>
-            <section class="buttons">
-                <img src="/assets/s1.jpg" alt="sub 1">
-                Spartan & Pudgey
-            </section>
-
-            <section class="buttons">
-                <img src="/assets/s2.jpg" alt="sub 2">
-                Johnny Chang
-            </section>
-
-            <section class="buttons">
-                <img src="/assets/s3.jpg" alt="sub 3">
-                JUST TRUST ASH
-            </section>
-
-            <section class="buttons">
-                <img src="/assets/s4.jpg" alt="sub 4">
-                Fooster
-            </section>
-
-            <section class="buttons">
-                <img src="/assets/s5.jpg" alt="sub 5">
-                Markiplier
-            </section>
-
-        </div>
-
-        <div class="aside-sections">
-
-            <h3>You ></h3>
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="account icon">account_box</span>
-                Your channel
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="history icon">history</span>
-                History
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="playlist icon">playlist_play</span>
-                Playlists
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="watch later icon">schedule</span>
-                Watch later
-            </section>
-
-            <section class="buttons">
-                <img src="/like.svg" alt="like icon">
-                Liked videos
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="your videos icon">smart_display</span>
-                Your videos
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="download icon">download</span>
-                Downloads
-            </section>
-        </div>
-
-        <div class="aside-sections">
-
-            <h3>More From YouTube</h3>
-
-            <section class="buttons">
-                <img src="/premium.svg" alt="youtube premium icon">
-                YouTube Premium
-            </section>
-
-            <section class="buttons">
-                <img src="/music.svg" alt="youtube music icon">
-                YouTube Music
-            </section>
-
-            <section class="buttons">
-                <img src="/kids.svg" alt="youtube kids icon">
-                YouTube Kids
-            </section>
-            
-
-        </div>
-
-        <div class="aside-sections">
-
-            <h3>Explore</h3>
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="music symbol icon">music_note</span>
-                Music
-            </section>
-
-            <section class="buttons">
-                <img src="/gaming.svg" alt="gaming icon">
-                Gaming
-            </section>
-
-            <section class="buttons">
-                <span class="material-symbols-outlined" alt="trophy icon">trophy</span>
-                Sport
-            </section>
-
-        </div>
-
-        <div class="aside-sections">
-            <section class="buttons">
-                <img src="/report.svg" alt="report">
-                Report History
-            </section>
-            
-        </div>
-
-        <footer>
-
-            <div>
-                <span>About</span>
-                <span>Press</span>
-                <span>Copyright</span>
-                <span>Contact us</span>
-                <span>Creator</span>
-                <span>Advertise</span>
-                <span>Developers</span>
-            </div>
-            
-            <div>
-                <span>Terms</span>
-                <span>Privacy Policy & Safety</span>
-                <span>How YouTube works</span>
-                <span>Test new features</span>
+                <section class="buttons" id="shorts">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z"/></svg>
+                    Shorts
+                </section> 
             </div>
 
-        </footer>
-    </aside>
+            <div class="aside-sections">
 
-    <main>
+                <h3>Subscriptions ></h3>
+                <section class="buttons">
+                    <img src="/assets/s1.jpg" alt="sub 1">
+                    Spartan & Pudgey
+                </section>
 
-        <div class="video-grid">
+                <section class="buttons">
+                    <img src="/assets/s2.jpg" alt="sub 2">
+                    Johnny Chang
+                </section>
 
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/1.png" alt=""></div>
+                <section class="buttons">
+                    <img src="/assets/s3.jpg" alt="sub 3">
+                    JUST TRUST ASH
+                </section>
+
+                <section class="buttons">
+                    <img src="/assets/s4.jpg" alt="sub 4">
+                    Fooster
+                </section>
+
+                <section class="buttons">
+                    <img src="/assets/s5.jpg" alt="sub 5">
+                    Markiplier
+                </section>
+
+            </div>
+
+            <div class="aside-sections">
+
+                <h3>You ></h3>
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="account icon">account_box</span>
+                    Your channel
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="history icon">history</span>
+                    History
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="playlist icon">playlist_play</span>
+                    Playlists
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="watch later icon">schedule</span>
+                    Watch later
+                </section>
+
+                <section class="buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M9.221 1.795a1 1 0 011.109-.656l1.04.173a4 4 0 013.252 4.784L14 9h4.061a3.664 3.664 0 013.576 2.868A3.68 3.68 0 0121 14.85l.02.087A3.815 3.815 0 0120 18.5v.043l-.01.227a2.82 2.82 0 01-.135.663l-.106.282A3.754 3.754 0 0116.295 22h-3.606l-.392-.007a12.002 12.002 0 01-5.223-1.388l-.343-.189-.27-.154a2.005 2.005 0 00-.863-.26l-.13-.004H3.5a1.5 1.5 0 01-1.5-1.5V12.5A1.5 1.5 0 013.5 11h1.79l.157-.013a1 1 0 00.724-.512l.063-.145 2.987-8.535Zm-1.1 9.196A3 3 0 015.29 13H4v4.998h1.468a4 4 0 011.986.528l.27.155.285.157A10 10 0 0012.69 20h3.606c.754 0 1.424-.483 1.663-1.2l.03-.126a.819.819 0 00.012-.131v-.872l.587-.586c.388-.388.577-.927.523-1.465l-.038-.23-.02-.087-.21-.9.55-.744A1.663 1.663 0 0018.061 11H14a2.002 2.002 0 01-1.956-2.418l.623-2.904a2 2 0 00-1.626-2.392l-.21-.035-2.71 7.741Z"/></svg>
+                    Liked videos
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="your videos icon">smart_display</span>
+                    Your videos
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="download icon">download</span>
+                    Downloads
+                </section>
+            </div>
+
+            <div class="aside-sections">
+
+                <h3>More From YouTube</h3>
+
+                <section class="buttons">
+                    <img src="/premium.svg" alt="youtube premium icon">
+                    YouTube Premium
+                </section>
+
+                <section class="buttons">
+                    <img src="/music.svg" alt="youtube music icon">
+                    YouTube Music
+                </section>
+
+                <section class="buttons">
+                    <img src="/kids.svg" alt="youtube kids icon">
+                    YouTube Kids
+                </section>
                 
-                <div class="video-info">
-                <img src="/assets/p1.jpg" alt="profile icon">
 
-                <div class="video-details">
-                    <p>YOUR TONGUE IS REWIRING YOUR BRAIN</p>
-                    <span>Wisdom Islands</span>
-                    <span>7.3k views • 2 days ago</span>
+            </div>
+
+            <div class="aside-sections">
+
+                <h3>Explore</h3>
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="music symbol icon">music_note</span>
+                    Music
+                </section>
+
+                <section class="buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M15.97 2.615 12 4.998 8.03 2.615a2 2 0 00-2.06 0l-5 3A2 2 0 000 7.33v7.34a2 2 0 00.97 1.715l10 6c.634.38 1.426.38 2.06 0l10-6A1.998 1.998 0 0024 14.67V7.33a2 2 0 00-.97-1.715l-5-3a2 2 0 00-2.06 0ZM12 7.33l5-3 5 3v7.34l-10 6-10-6V7.33l5-3 5 3ZM7 7.5a1 1 0 00-1 1v1.502H4.5a1 1 0 000 2H6V13.5a1 1 0 102 0v-1.498h1.5a1 1 0 000-2H8V8.5a1 1 0 00-1-1Zm11.5 1.502a1.5 1.5 0 100 3 1.5 1.5 0 000-3Zm-4 2a1.5 1.5 0 100 3 1.5 1.5 0 000-3Z"/></svg>
+                    Gaming
+                </section>
+
+                <section class="buttons">
+                    <span class="material-symbols-outlined" alt="trophy icon">trophy</span>
+                    Sport
+                </section>
+
+            </div>
+
+            <div class="aside-sections">
+                <section class="buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="m4 2.999-.146.073A1.55 1.55 0 003 4.454v16.545a1 1 0 102 0v-6.491a7.26 7.26 0 016.248.115l.752.376a8.94 8.94 0 008 0l.145-.073c.524-.262.855-.797.855-1.382V4.458a1.21 1.21 0 00-1.752-1.083 7.26 7.26 0 01-6.496 0L12 2.999a8.94 8.94 0 00-8 0Zm7.105 1.79v-.002l.752.376A9.26 9.26 0 0019 5.641v7.62a6.95 6.95 0 01-6.105-.052l-.752-.376A9.261 9.261 0 005 12.355v-7.62a6.94 6.94 0 016.105.054Z"/></svg>
+                    Report History
+                </section>
+                
+            </div>
+
+            <footer>
+
+                <div>
+                    <span>About</span>
+                    <span>Press</span>
+                    <span>Copyright</span>
+                    <span>Contact us</span>
+                    <span>Creator</span>
+                    <span>Advertise</span>
+                    <span>Developers</span>
                 </div>
-            </div>
                 
-            </div>
+                <div>
+                    <span>Terms</span>
+                    <span>Privacy Policy & Safety</span>
+                    <span>How YouTube works</span>
+                    <span>Test new features</span>
+                </div>
 
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/2.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p2.jpg" alt="profile icon">
+            </footer>
+        </aside>
+
+        <main>
+
+            <div class="video-grid">
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/1.png" alt=""></div>
+                    
+                    <div class="video-info">
+                    <img src="/assets/p1.jpg" alt="profile icon">
 
                     <div class="video-details">
-                        <p>Learn react with this one project</p>
-                        <span>Tech with Tim</span>
-                        <span>839k views • 1 year ago</span>
+                        <p>YOUR TONGUE IS REWIRING YOUR BRAIN</p>
+                        <span>Wisdom Islands</span>
+                        <span>7.3k views • 2 days ago</span>
                     </div>
                 </div>
-                
-            </div>
-
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/3.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p3.jpg" alt="profile icon">
-                    <div>
-                        <p>I wasted years learning to code before I learnt this</p>
-                        <span>web developete</span>
-                        <span>200 views • 1 year ago</span>
-                    </div>
-                    <div class="posted-by"></div>
-                    <div class="views-date"></div>
+                    
                 </div>
-                
-            </div>
 
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/4.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p4.jpg" alt="profile icon">
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/2.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p2.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>Learn react with this one project</p>
+                            <span>Tech with Tim</span>
+                            <span>839k views • 1 year ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/3.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p3.jpg" alt="profile icon">
+                        <div>
+                            <p>I wasted years learning to code before I learnt this</p>
+                            <span>web developete</span>
+                            <span>200 views • 1 year ago</span>
+                        </div>
+                        <div class="posted-by"></div>
+                        <div class="views-date"></div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/4.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p4.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>God of War Laufey new gameplay</p>
+                            <span>Hollow</span>
+                            <span>62k views • 7 hours ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/5.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p5.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>Josiah Queen (Yesterday is dead)</p>
+                            <span>Finding Sounds</span>
+                            <span>24k views • 1 year ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/6.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p6.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>The winter soldier reaction</p>
+                            <span>Just trust ash</span>
+                            <span>35k views • 1 year ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/7.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p7.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>Jesus will help you with your future</p>
+                            <span>GospelHealing</span>
+                            <span>35k views • 2 years ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/8.png" alt=""></div>
+                    
+                    <div class="video-info">
+                        <img src="/assets/p8.jpg" alt="profile icon">
+
+                        <div class="video-details">
+                            <p>DISGUSTING Bug Infested Xbox</p>
+                            <span>Restorish</span>
+                            <span>3k views • 2 months ago</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="video">
+                    <div class="thumbnail"><img src="/assets/1.png" alt=""></div>
+                    
+                    <div class="video-info">
+                    <img src="/assets/p1.jpg" alt="profile icon">
 
                     <div class="video-details">
-                        <p>God of War Laufey new gameplay</p>
-                        <span>Hollow</span>
-                        <span>62k views • 7 hours ago</span>
+                        <p>YOUR TONGUE IS REWIRING YOUR BRAIN</p>
+                        <span>Wisdom Islands</span>
+                        <span>7.3k views • 2 days ago</span>
                     </div>
                 </div>
+
                 
+
             </div>
 
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/5.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p5.jpg" alt="profile icon">
 
-                    <div class="video-details">
-                        <p>Josiah Queen (Yesterday is dead)</p>
-                        <span>Finding Sounds</span>
-                        <span>24k views • 1 year ago</span>
-                    </div>
-                </div>
-                
-            </div>
+        </main>
 
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/6.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p6.jpg" alt="profile icon">
-
-                    <div class="video-details">
-                        <p>The winter soldier reaction</p>
-                        <span>Just trust ash</span>
-                        <span>35k views • 1 year ago</span>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/7.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p7.jpg" alt="profile icon">
-
-                    <div class="video-details">
-                        <p>Jesus will help you with your future</p>
-                        <span>GospelHealing</span>
-                        <span>35k views • 2 years ago</span>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/8.png" alt=""></div>
-                
-                <div class="video-info">
-                    <img src="/assets/p8.jpg" alt="profile icon">
-
-                    <div class="video-details">
-                        <p>DISGUSTING Bug Infested Xbox</p>
-                        <span>Restorish</span>
-                        <span>3k views • 2 months ago</span>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="video">
-                <div class="thumbnail"><img src="/assets/1.png" alt=""></div>
-                
-                <div class="video-info">
-                <img src="/assets/p1.jpg" alt="profile icon">
-
-                <div class="video-details">
-                    <p>YOUR TONGUE IS REWIRING YOUR BRAIN</p>
-                    <span>Wisdom Islands</span>
-                    <span>7.3k views • 2 days ago</span>
-                </div>
-            </div>
-
-        </div>
-
-
-    </main>
+    </div>
 
 </body>
 </html>

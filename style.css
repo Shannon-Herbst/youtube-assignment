@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
 }
 
 header {
@@ -13,8 +19,113 @@ header {
     margin-right: 15px;
 }
 
-.nav-buttons {
-    margin-right: 4vw;
+#theme-switch {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin-right: 1vw;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0F0F0F;
+    border: none;
+}
+
+#theme-switch:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* LIGHT MODE (default) */
+#theme-switch span:first-child {
+    display: block;   /* light icon */
+}
+
+#theme-switch span:last-child {
+    display: none;    /* dark icon hidden */
+}
+
+/* DARK MODE */
+.darkmode #theme-switch span:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch span:last-child {
+    display: block;
+}
+
+.darkmode {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.darkmode header,
+.darkmode aside,
+.darkmode main {
+    background-color: #0f0f0f;
+}
+
+.darkmode main p {
+    color: white;
+}
+
+.darkmode main span {
+    color: #aaa;
+}
+
+.darkmode aside svg {
+    filter: brightness(0) invert(1);
+}
+
+.darkmode button {
+    background-color: #343d46;
+    color: #f9f9f9;
+}
+
+.darkmode input {
+    background-color: #0F0F0F;
+}
+
+.darkmode #search-icon {
+    background-color: #343d46;
+}
+
+.darkmode #profile-button {
+    background-color: #343d46;
+}
+
+.darkmode #create-button {
+    background-color: #343d46;
+}
+
+.darkmode aside .buttons:hover {
+    background-color: #606060;
+}
+
+.darkmode #home {
+    background-color: #606060;
+}
+
+.darkmode #theme-switch:hover {
+    background-color: #606060;
+}
+
+.darkmode #search-icon:hover {
+    background-color: #606060;
+}
+
+.darkmode #create-button:hover {
+    background-color: #606060;
+}
+
+.darkmode #noti-button:hover {
+    background-color: #606060;
+}
+
+.darkmode #profile-button:hover {
+    background-color: #606060;
 }
 
 #create-button {
@@ -22,7 +133,7 @@ header {
     border-bottom-left-radius: 9999px;
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
-    width: 5vw;
+    /* width: 5vw; */
     font-size: 14px;
     font-weight: 500;
 
@@ -37,6 +148,10 @@ header {
     padding-right: 5px;
     background-color: rgba(0, 0, 0, 0.05);
     margin-right: 1vw;
+
+    width: auto;
+    min-width: 80px;
+    padding: 10px 16px;
 }
 
 #create-button:hover {
@@ -61,6 +176,7 @@ header {
 aside {
     display: block;
     width: 250px;
+    flex-shrink: 0;
     padding: 0;
     float: left;
     /* height: 100vh; */
@@ -83,11 +199,42 @@ aside section:hover {
     border-radius: 10px;
 }
 
+#home {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
 aside img{
-    height: 24px;
+    /* height: 24px;
     width: 24px;
     border-radius: 50%;
-    margin-right: 12px;
+    margin-right: 12px; */
+
+    width: 100%;
+    max-width: 48px;
+    height: auto;
+    border-radius: 50%;
+}
+
+aside svg {
+    /* height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 12px;   */
+
+    width: 100%;
+    max-width: 48px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.darkmode {
+    scrollbar-color: #3a3a3a #0f0f0f;
+    scrollbar-width: thin;
+}
+
+.darkmode footer {
+    color: gray;
 }
 
 aside span {
@@ -112,6 +259,7 @@ aside h3{
 main {
     height: calc(100vh - 60px);
     overflow-y: auto;
+    flex: 1;
 }
 
 main p{
@@ -131,24 +279,35 @@ main img {
 }
 
 .videos {
-    width: calc(100vw - 240px);
+    /* width: calc(100vw - 240px); */
     height: 100%;
     background: #f9f9f9;
     border-top: 1px solid #cccccc;
     overflow-y: scroll;
+
+    flex: 1;
+    width: auto;
 }
 
 .video-grid {
-    display: flex;
+    /* display: flex;
     padding: 15px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 15px;
 }
 
 .video {
-    width: calc(32% - 12px);
+    /* width: calc(32% - 12px); */
     margin-right: 12px;
     cursor: pointer;
     margin-bottom: 35px;
+
+    width: 100%;
+    margin: 0;
 }
 
 .thumbnail img {
@@ -279,4 +438,80 @@ footer {
 
 footer div{
     padding: 16px 24px 0px;
+}
+
+
+@media (max-width: 1024px) {
+    aside {
+        width: 72px;
+        overflow-x: hidden;
+    }
+
+    aside h3,
+    aside p {
+        display: none;
+    }
+
+    .aside-sections {
+        padding: 8px 0;
+    }
+
+    aside section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    aside img {
+        width: 24px;
+        height: 24px;
+        max-width: none;
+    }
+
+    aside span {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    aside {
+        display: none;
+    }
+
+    .videos {
+        width: 100%;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #create-button span {
+        display: none;
+    }
+
+    .nav-buttons {
+        margin-right: 0;
+    }
+
+    #search {
+        min-width: 100px;
+    }
+
+    .video-info p {
+        font-size: 13px;
+    }
 }
