@@ -1,21 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 20px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.nav-buttons {
+    margin-right: 4vw;
+}
+
+#create-button {
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    width: 5vw;
+    font-size: 14px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-right: 1vw;
+}
+
+#create-button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#noti-button {
+    margin-right: 1vw;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#noti-button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 aside {
     display: block;
     width: 250px;
-    padding: 20px;
+    padding: 0;
     float: left;
-    height: 100vh;
+    /* height: 100vh; */
+    height: calc(100vh - 60px);
+    /* overflow-y: auto; */
 
     overflow-y: scroll;
+
+    font-size: 14px;
+    font-weight: 400;
 }
 
-main {
+aside section {
+    padding: 4px 0;
+}
+
+aside section:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+aside img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+aside span {
+    margin-right: 12px;
+}
+
+aside h3{
+    padding-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -23,10 +107,90 @@ main {
 
     height: 100vh;
     overflow-y: scroll;
+} */
+
+main {
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+main p{
+    font-size: 16px;
+    color: #0F0F0F;
+    font-weight: 500
+}
+
+main span{
+    font-size: 14px;
+    color: #606060;
+    font-weight: 400;
+}
+
+main img {
+    border-radius: 10px;
+}
+
+.videos {
+    width: calc(100vw - 240px);
+    height: 100%;
+    background: #f9f9f9;
+    border-top: 1px solid #cccccc;
+    overflow-y: scroll;
+}
+
+.video-grid {
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.video {
+    width: calc(32% - 12px);
+    margin-right: 12px;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.video-info {
+    display: flex;
+    margin-top: 5px;
+    width: 90%;
+}
+
+.video-info div span {
+    display: block;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-info img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin: 0px 12px 0px 0px;
+}
+
+.video-info p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.posted-by {
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
 }
 
 #search {
-    border: 1px solid #3e3e3e;
+    border: 1px solid lightgray;
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
     height: 34px;
@@ -35,17 +199,50 @@ main {
     border-right: none;
 }
 
+#mic {
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+#mic:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#profile-button {
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+}
+
+#profile-button:hover {
+    cursor: pointer;
+}
+
 header div {
     display: flex;
     align-items: center;
 }
 
 #search-icon {
-    border: 1px solid #3e3e3e;
+    border: 1px solid lightgrey;
     padding: 4px;
-    border-top-right-radius: 17px;
-    border-bottom-right-radius: 17px;
-    width: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#search-icon:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 div section {
@@ -65,5 +262,21 @@ body {
     height: 100vh;
     width: 100vw;
 
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.aside-sections {
+    border-bottom: 1px solid black;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    padding: 12px;
+}
+
+footer {
+    font-size: 13px;
+    color: #606060;
+    margin-bottom: 12px;
+}
+
+footer div{
+    padding: 16px 24px 0px;
 }
