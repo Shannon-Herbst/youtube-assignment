@@ -542,10 +542,13 @@ div section {
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
 
-    /* overflow: hidden; */
+    overflow: hidden;
+
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .aside-sections {
